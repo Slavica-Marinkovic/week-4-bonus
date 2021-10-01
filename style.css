@@ -7,8 +7,9 @@
     --White: hsl(100,100%,100%);
     --Black: hsla(0,0%,0%,1);
 }
-*  {
+* {
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 body {
     margin: 0;
@@ -80,7 +81,9 @@ form input {
     padding: 14px 32px;
     border-radius: 5px;
     border: 1px solid hsl(0, 0%, 87%);
+    
 }
+
 .show-error-sign {
     background: url(images/icon-error.svg);
     background-repeat: no-repeat;
@@ -150,17 +153,18 @@ form button:hover {
         width: 90%;
     }
 }
-@media screen and (max-width: 850px){
+@media screen and (max-width: 1024px){
     .content h1 {
         font-size: 37px;
         line-height: 40px;
     }
-}
-
-@media screen and (max-width: 760px) {
     body {
         align-items: flex-start;
         padding: 40px;
+        background: url('images/bg-intro-mobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--Red);
     }
    .container {
        flex-direction: column;
@@ -172,13 +176,12 @@ form button:hover {
        margin-right: 0;
        width: 80%;
    }
-   .content h1 {
-       font-size: 32px;
-   }
+
    .form-content {
       width: 80%;
    }
 }
+
 @media screen and (max-width: 560px) {
     .form-content {
         width: 90%;
@@ -190,10 +193,6 @@ form button:hover {
 @media screen and (max-width: 460px) {
     body {
         padding: 24px;
-        background: url('images/bg-intro-mobile.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: var(--Red);
     }
     .container {
         margin-top: 0;
@@ -230,7 +229,7 @@ form button:hover {
     }
 }
 
-@media screen and (max-width:760px) and (max-height:1000px) {
+@media screen and (max-width:890px) and (max-height:1000px) {
    .container {
        margin-top: 0
    }

@@ -10,10 +10,8 @@ var email = document.querySelector(".email");
 var password = document.querySelector(".password");
 
 
-
 document.getElementById("btn").addEventListener('click', function(e){
     e.preventDefault();
-  
     var fNameVal = document.querySelector(".first-name").value.trim();
     var lNameVal = document.querySelector(".last-name").value.trim();
     var emailVal = document.querySelector(".email").value.trim();
@@ -23,9 +21,17 @@ document.getElementById("btn").addEventListener('click', function(e){
        error_first_name.classList.add("show-error-msg");
        fName.classList.add('show-error-sign', 'show-red-border');
     }
+    else {
+      error_first_name.classList.remove("show-error-msg");
+      fName.classList.remove('show-error-sign', 'show-red-border');
+    }
     if(lNameVal == ""){
         error_last_name.classList.add("show-error-msg");
         lName.classList.add('show-error-sign', 'show-red-border');
+     }
+     else {
+      error_last_name.classList.remove("show-error-msg");
+      lName.classList.remove('show-error-sign', 'show-red-border');
      }
      if(emailVal == ""){
         error_email.classList.add("show-error-msg");
@@ -35,10 +41,20 @@ document.getElementById("btn").addEventListener('click', function(e){
          error_email.innerHTML = "Looks like this is not an email";
          email.classList.add('show-error-sign', 'show-red-border');
          email.style.color ="#ff7a7a";
+     }else {
+      error_email.classList.remove("show-error-msg");
+      email.classList.remove('show-error-sign', 'show-red-border');
+      email.style.color = "hsl(249, 10%, 26%)";
      }
+
      if(passwordVal == ""){
         error_password.classList.add("show-error-msg");
         password.classList.add('show-error-sign', 'show-red-border');
      }
-    
-});
+     else {
+      error_password.classList.remove("show-error-msg");
+      password.classList.remove('show-error-sign', 'show-red-border');
+     }
+     
+   });
+   
